@@ -31,7 +31,7 @@ const NavbarMobile = ({mobileOpen, setMobileOpen}: mobileOpenType) => {
           <span>MENU</span>
         </button>
         <ul>
-            <li><NavLink to='/'>Home</NavLink></li>
+            <li><NavLink to='/#shuffle'>Shuffle</NavLink></li>
             <li><NavLink to='/'>Gallery</NavLink></li>
             <li><NavLink to='/'>Artists</NavLink></li>
             <li><NavLink to='/'>About</NavLink></li>

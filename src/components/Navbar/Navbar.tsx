@@ -8,7 +8,7 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-<header>
+<nav>
       <div className="page_navbar_outer">
         <div className="page_navbar">
           <div className="page_navbar-left">
@@ -23,7 +23,7 @@ const Navbar = () => {
           </div>
           <nav className="page_navbar-center">
               <ul>
-                <li><NavLink to='/'>Home</NavLink></li>
+                <li><NavLink to='/#shuffle'>Shuffle</NavLink></li>
                 <li><NavLink to='/'>Gallery</NavLink></li>
                 <li><NavLink to='/'>Artists</NavLink></li>
                 <li><NavLink to='/'>About</NavLink></li>
@@ -35,7 +35,7 @@ const Navbar = () => {
         </div>
       </div>
       <NavbarMobile mobileOpen={mobileOpen} setMobileOpen={setMobileOpen}/>
-  </header>
+  </nav>
   )
 }
 

@@ -1,0 +1,90 @@
+$backgroundCollor: rgb(255, 255, 255);
+$letterCollor: rgb(0, 0, 0);
+$ActiveLetterCollor: navy;
+.menu_bar1, .menu_bar2, .menu_bar3 {
+height: 2px;
+margin: 6px 0;
+transition: 0.4s;
+}
+.menu_bar1{
+    width: 100%;
+}
+.menu_bar2{
+    width: 50%;
+}
+.menu_bar3{
+    width: 75%;
+}  
+.mobile_menu_outer{
+    background-color: rgba(0, 0, 0,0.5);
+    width: 100%;
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    transition: all .3s ease;
+    &.active_mmobile{
+        opacity: 1;
+        visibility: visible;
+        transition: all .3s ease;
+    }
+    .mobile_menu{
+        width: 320px;
+        height: 100%;
+        background-color: $backgroundCollor;
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        left: -320px;
+        transition: all .3s ease;
+        &.active_mmobile{
+            left: 0;
+            opacity: 1;
+            visibility: visible;
+            transition: all .3s ease;
+        }
+        ul li{
+            width: 100%;
+            text-align: left;
+            border-style: solid;
+            border-color: rgb(207, 207, 207);
+            border-width: 0px 0px 1px 0px;
+            padding: 1rem 1.3rem 1rem 1.3rem;
+            a{
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 0.9rem;
+                color: #111;
+            }
+        }
+        button:first-child,button:last-child {
+            width: 100%;
+            color: $backgroundCollor;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        button:first-child{
+            background-color: $letterCollor;
+            span{
+                margin-left: 15px;
+            }
+        }
+        button:last-child {
+            background-color: $ActiveLetterCollor;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
+
+  
+  
+  
+  
+  
+  
+ 

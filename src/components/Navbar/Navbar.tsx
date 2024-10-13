@@ -2,7 +2,6 @@ import { useState } from 'react'
 import './Navbar.styles.scss'
 import { NavLink } from 'react-router-dom'
 import NavbarMobile  from './NavbarMobile'
-import { MdOutlineLightMode } from "react-icons/md";
 import { IoEarth } from "react-icons/io5";
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -25,13 +24,11 @@ const Navbar = () => {
               <ul>
                 <li><NavLink to='/#shuffle'>Shuffle</NavLink></li>
                 <li><NavLink to='/gallery'>Gallery</NavLink></li>
-                <li><NavLink to='/artist'>Artists</NavLink></li>
                 <li><NavLink to='/about'>About</NavLink></li>
               </ul>
           </nav>
-          <button className="page_navbar-right">
-              <MdOutlineLightMode/>
-          </button>
+          <div className="page_navbar-right">
+          </div>
         </div>
       </div>
       <NavbarMobile mobileOpen={mobileOpen} setMobileOpen={setMobileOpen}/>

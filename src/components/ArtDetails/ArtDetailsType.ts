@@ -1,10 +1,8 @@
-// Type for normalized colors and original colors
 type Color = {
     percentage: number;
     hex: string;
   }
   
-  // Type for the artist (principalMaker)
 type PrincipalMaker = {
 name: string;
 unFixedName: string;
@@ -18,7 +16,6 @@ nationality: string;
 productionPlaces: string[];
 }
 
-// Type for the image object
 type WebImage = {
 guid: string;
 offsetPercentageX: number;
@@ -28,7 +25,6 @@ height: number;
 url: string;
 }
 
-// Type for historical persons and dimensions
 type Dimension = {
 unit: string;
 type: string;
@@ -38,6 +34,7 @@ value: string;
 type ArtObject = {
 id: string;
 title: string;
+objectNumber: string,
 description: string;
 webImage: WebImage;
 colors: Color[];

@@ -1,6 +1,6 @@
 
 import { Route,createBrowserRouter, createRoutesFromElements, RouterProvider} from 'react-router-dom'
-import { Home, ArtGallery, Artists, About, IndividualArtPage } from './pages'
+import { Home, ArtGallery, About, IndividualArtPage, PageNotFoundpage } from './pages'
 import  { Main_wrapper }  from './wrappers'
 
 const route  = createBrowserRouter(
@@ -9,9 +9,8 @@ const route  = createBrowserRouter(
       <Route index element={<Home/>}/>
       <Route path='/gallery/' element={<ArtGallery/>}/>
       <Route path='/gallery/:id' element={<IndividualArtPage/>}/>
-      <Route path='/artist/' element={<Artists/>}/>
-      <Route path='/artist/:id' element={<Artists/>}/>
       <Route path='/about/' element={<About/>}/>
+      <Route path="*" element={<PageNotFoundpage/>}/>
     </Route>
   )
 )

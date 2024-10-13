@@ -30,10 +30,9 @@ const NavbarMobile = ({mobileOpen, setMobileOpen}: mobileOpenType) => {
           </div>
           <span>MENU</span>
         </button>
-        <ul>
+        <ul onClick={() => setMobileOpen(false)}>
             <li><NavLink to='/#shuffle'>Shuffle</NavLink></li>
             <li><NavLink to='/gallery'>Gallery</NavLink></li>
-            <li><NavLink to='/artist'>Artists</NavLink></li>
             <li><NavLink to='/about'>About</NavLink></li>
         </ul>
         <button onClick={() => setMobileOpen(false)}>CLOSE</button>

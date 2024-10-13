@@ -1,15 +1,10 @@
 import { Link } from 'react-router-dom'
+import { artworkType } from '../../types'
 
-type artworkType = {
-    artwork: {
-      title: string,
-      objectNumber: string,
-      webImage:{
-        url:string
-      }
-    }
+type ArtGalleryCardProps = {
+  artwork: artworkType;
 }
-const ArtGalleryCard = ({artwork}: artworkType) => {
+const ArtGalleryCard = ({artwork}: ArtGalleryCardProps) => {
   return (
     <Link to={`/gallery/${artwork?.objectNumber}`} key={artwork?.objectNumber} className='art_gallery_card'>
         <img src={`${artwork?.webImage?.url}`} alt={artwork?.title}  loading="lazy"/>

@@ -9,25 +9,10 @@ $ActiveLetterCollor: navy;
     font-weight: bold;
     transition: 0.5s ease-in-out;
 }
-.home_hero{
-    margin: 5vh 0px;
-    height: 80vh;
-    h1{
-        font-size: 4rem;
-    }
-    p{
-        font-size: 1.3rem;
-    }
-    a{
-        border-radius: 20px;
-        margin-top: 1rem;
-        padding: 0.7rem 1.5rem;
-        &:hover{
-            padding-right: 2rem;
-        }
-    }
-}
 .home_shuffle{
+    h1{
+        margin-bottom: 10px;
+    }
     margin: 5vh 5vw;
     height: 80vh;
     display: flex;

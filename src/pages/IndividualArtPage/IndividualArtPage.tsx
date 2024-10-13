@@ -1,28 +1,36 @@
 import './IndividualArtPage.styles.scss'
-import { Link, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import { FaArrowLeft } from "react-icons/fa";
 import { ArtDetails } from '../../components';
 import ArtObject  from '../../components/ArtDetails/ArtDetailsType';
 
-
+interface ApiResponse {
+  artObject: ArtObject;
+}
 const IndividualArtPage = () => {
   const { id } = useParams()
   const [art, setArt] = useState<ArtObject | undefined>(undefined);
   const [loading, setLoading] = useState(true);
   const [errorMesage, setErrorMesage] = useState<string | undefined>(undefined);
-
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchArt = async () => {
       const apiUrl = `https://www.rijksmuseum.nl/api/en/collection/${id}?key=KZE75qXi`;
       try {
         const res = await fetch(apiUrl);
-        const data = await res.json();
-        if (!data.artObject){
-          setErrorMesage("Error fetching data wrong id")
+        const data: ApiResponse = await res.json();
+        if (!res.ok) {
+          throw new Error(`HTTP error! Status: ${res.status}`);
         }
-        setArt(data.artObject);
+
+        if (data.artObject){
+          setArt(data.artObject);
+        } else {
+          setErrorMesage('No artworks found.');
+        }
+    
       } catch (error) {
         setErrorMesage(`Error fetching data, ${error}`)
         console.log('Error fetching data', error);
@@ -34,13 +42,16 @@ const IndividualArtPage = () => {
     fetchArt();
   }, [id]);
 
+  const handleBack = () => {
+    navigate(-1);
+  };
   return (
     <div className='indivdual_art_outer'>
       {errorMesage && (<div className='error_mesage'>{errorMesage}</div>)}
       {loading && (<h1>Loading....</h1>)}
       { !loading && (
         <>
-        <Link  className="back_to_gallery" to='/gallery'><FaArrowLeft /></Link>
+        <button onClick={handleBack} className="back_to_gallery"><FaArrowLeft /></button>
         <div className='iner_img_section'>
           <img src={art?.webImage?.url} alt={art?.label?.title} />
         </div>

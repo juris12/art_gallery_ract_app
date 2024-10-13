@@ -24,9 +24,9 @@ const Navbar = () => {
           <nav className="page_navbar-center">
               <ul>
                 <li><NavLink to='/#shuffle'>Shuffle</NavLink></li>
-                <li><NavLink to='/'>Gallery</NavLink></li>
-                <li><NavLink to='/'>Artists</NavLink></li>
-                <li><NavLink to='/'>About</NavLink></li>
+                <li><NavLink to='/gallery'>Gallery</NavLink></li>
+                <li><NavLink to='/artist'>Artists</NavLink></li>
+                <li><NavLink to='/about'>About</NavLink></li>
               </ul>
           </nav>
           <button className="page_navbar-right">

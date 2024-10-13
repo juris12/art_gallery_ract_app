@@ -1,2 +1,5 @@
 export { default as Home } from './Home/Home'
 export { default as ArtGallery } from './ArtGallery/ArtGallery'
+export { default as Artists } from './Artists/Artists'
+export { default as About } from './About/About'
+export { default as IndividualArtPage } from './IndividualArtPage/IndividualArtPage'

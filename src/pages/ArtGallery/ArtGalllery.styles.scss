@@ -1,0 +1,60 @@
+$backgroundCollor: rgb(255, 255, 255);
+$letterCollor: rgb(0, 0, 0);
+$ActiveLetterCollor: navy;
+.gallery_hero{
+    margin: 5vh 0px;
+    h1{
+        font-size: 3rem;
+    }
+    p{
+        font-size: 1.3rem;
+    }
+}
+.gallery{
+    margin: 5vh 5vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.art_gallery_card_empty{
+    margin: 10px;
+    height: 20vh;
+    width: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../assets/spinner.gif);
+    background-size: 100% 100%;
+    font-weight: bold;
+}
+.art_gallery_card{
+    position: relative;
+    width: max-content;
+    margin: 10px;
+    background-image: url(../../assets/spinner.gif);
+    background-size: 100% 100%;
+    &:hover p{
+        opacity: 1;
+    }
+    img{
+        width: auto;
+        height: 100%;
+        max-height: 30vh;
+    }
+    p{
+        transition: 0.5s ease-in-out;
+        position: absolute;
+        opacity: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        min-height: 30%;
+        text-align: center;
+        padding: 10% 10px;
+        color: white;
+        margin: 0px;
+        font-weight: bold;
+        background-color: rgba(0, 0, 0, 0.404);
+    }
+}

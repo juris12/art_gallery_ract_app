@@ -5,7 +5,9 @@ const Main_wrapper = () => {
   return (
     <>
         <Navbar/>
-        <Outlet/>  
+        <section>
+          <Outlet/>   
+        </section> 
     </>
   )
 }

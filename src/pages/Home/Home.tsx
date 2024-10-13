@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 const Home = () => {
   return (
-    <section>
+    <>
       <div className='home_hero'>
         <h1>Rijksmuseum shuffle</h1>
         <p>Explore our varyous artists and their work</p>
@@ -16,7 +16,7 @@ const Home = () => {
           </div>
           <button className='super_button'>shuffle</button>
       </div>
-    </section>
+    </>
   )
 }
 
